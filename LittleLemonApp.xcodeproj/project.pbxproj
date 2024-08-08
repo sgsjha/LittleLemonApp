@@ -11,6 +11,9 @@
 		620904A42C62525A008DD4D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620904A32C62525A008DD4D5 /* ContentView.swift */; };
 		620904A62C62525B008DD4D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620904A52C62525B008DD4D5 /* Assets.xcassets */; };
 		620904A92C62525B008DD4D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620904A82C62525B008DD4D5 /* Preview Assets.xcassets */; };
+		620904B02C625424008DD4D5 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620904AF2C625424008DD4D5 /* FirstView.swift */; };
+		620904B22C64E344008DD4D5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620904B12C64E344008DD4D5 /* MainView.swift */; };
+		620904B42C650F1E008DD4D5 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620904B32C650F1E008DD4D5 /* MenuItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		620904A32C62525A008DD4D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		620904A52C62525B008DD4D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		620904A82C62525B008DD4D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		620904AF2C625424008DD4D5 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		620904B12C64E344008DD4D5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		620904B32C650F1E008DD4D5 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				620904A12C62525A008DD4D5 /* LittleLemonAppApp.swift */,
 				620904A32C62525A008DD4D5 /* ContentView.swift */,
+				620904AF2C625424008DD4D5 /* FirstView.swift */,
+				620904B12C64E344008DD4D5 /* MainView.swift */,
+				620904B32C650F1E008DD4D5 /* MenuItemView.swift */,
 				620904A52C62525B008DD4D5 /* Assets.xcassets */,
 				620904A72C62525B008DD4D5 /* Preview Content */,
 			);
@@ -138,7 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				620904A42C62525A008DD4D5 /* ContentView.swift in Sources */,
+				620904B22C64E344008DD4D5 /* MainView.swift in Sources */,
+				620904B02C625424008DD4D5 /* FirstView.swift in Sources */,
 				620904A22C62525A008DD4D5 /* LittleLemonAppApp.swift in Sources */,
+				620904B42C650F1E008DD4D5 /* MenuItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
