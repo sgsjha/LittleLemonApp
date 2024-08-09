@@ -22,6 +22,8 @@
 		620904C32C656E26008DD4D5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 620904C22C656E26008DD4D5 /* FirebaseFirestore */; };
 		620904C52C656E26008DD4D5 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 620904C42C656E26008DD4D5 /* FirebaseFunctions */; };
 		620904C72C656E26008DD4D5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 620904C62C656E26008DD4D5 /* FirebaseStorage */; };
+		620904C92C661471008DD4D5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620904C82C661471008DD4D5 /* MenuView.swift */; };
+		620904CD2C6614E3008DD4D5 /* ReservationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620904CC2C6614E3008DD4D5 /* ReservationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		620904B12C64E344008DD4D5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		620904B32C650F1E008DD4D5 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		620904B72C656D62008DD4D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		620904C82C661471008DD4D5 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		620904CC2C6614E3008DD4D5 /* ReservationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				620904A32C62525A008DD4D5 /* ContentView.swift */,
 				620904AF2C625424008DD4D5 /* FirstView.swift */,
 				620904B12C64E344008DD4D5 /* MainView.swift */,
+				620904CC2C6614E3008DD4D5 /* ReservationsView.swift */,
+				620904C82C661471008DD4D5 /* MenuView.swift */,
 				620904B32C650F1E008DD4D5 /* MenuItemView.swift */,
 				620904A52C62525B008DD4D5 /* Assets.xcassets */,
 				620904B72C656D62008DD4D5 /* GoogleService-Info.plist */,
@@ -177,8 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				620904A42C62525A008DD4D5 /* ContentView.swift in Sources */,
+				620904C92C661471008DD4D5 /* MenuView.swift in Sources */,
 				620904B22C64E344008DD4D5 /* MainView.swift in Sources */,
 				620904B02C625424008DD4D5 /* FirstView.swift in Sources */,
+				620904CD2C6614E3008DD4D5 /* ReservationsView.swift in Sources */,
 				620904A22C62525A008DD4D5 /* LittleLemonAppApp.swift in Sources */,
 				620904B42C650F1E008DD4D5 /* MenuItemView.swift in Sources */,
 			);
