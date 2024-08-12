@@ -11,6 +11,7 @@ import Firebase
 
 @main
 struct LittleLemonAppApp: App {
+   // @StateObject var dataManager = DataManager()
     
     init() {
         FirebaseApp.configure()

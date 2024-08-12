@@ -18,7 +18,8 @@ struct FirstView: View {
     var body: some View {
         
         if isSignedIn {
-            MainView()
+            MainView().environmentObject(DataManager())
+            
         }
         else {
             NavigationView {
