@@ -76,29 +76,11 @@ struct FirstView: View {
                     }.padding(.all)
                         
                     
-                    
-                    
-                    Button(action: {
-                        // Handle Google Sign-In
-                    }) {
-                        HStack {
-                            Image("google_logo").resizable().scaledToFit()
-                            Text("Sign in with Google").foregroundStyle(Color.black).font(.title2)
-                        }
-                        .padding()
-                        .frame(width: 300, height: 50, alignment: .center)
-                        .background(Color.gray.opacity(0.5))
-                        .cornerRadius(15)
-                    }
-                    .padding(.top, 10)
+                
                     
                     Spacer()
                     
-                    NavigationLink(destination: MainView()) {
-                        Text("Continue as Guest")
-                            .foregroundColor(.blue)
-                    }
-                    .padding(.bottom, 20)
+                   
                 }
                 .padding()
             }

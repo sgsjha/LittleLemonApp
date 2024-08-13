@@ -1,13 +1,9 @@
 import FirebaseFirestore
 import FirebaseAuth
-import FirebaseDatabase
-import Firebase
 import Foundation
-
 
 class DataManager: ObservableObject {
     @Published var reservations: [Reservation] = []
-
 
     init() {
         fetchReservations()
@@ -28,8 +24,12 @@ class DataManager: ObservableObject {
             } else if let snapshot = snapshot {
                 self.reservations = snapshot.documents.map { doc in
                     let data = doc.data()
-                    let date = (data["date"] as? Timestamp)?.dateValue() ?? Date()
-                    let time = (data["time"] as? Timestamp)?.dateValue() ?? Date()
+                    let dateString = data["date"] as? String ?? ""
+                    let timeString = data["time"] as? String ?? ""
+                    
+                    let date = self.dateFormatter.date(from: dateString) ?? Date()
+                    let time = self.timeFormatter.date(from: timeString) ?? Date()
+                    
                     return Reservation(
                         id: doc.documentID,
                         date: date,
@@ -48,10 +48,13 @@ class DataManager: ObservableObject {
             return
         }
 
+        let dateString = dateFormatter.string(from: date)
+        let timeString = timeFormatter.string(from: time)
+        
         let db = Firestore.firestore()
         let newReservation = [
-            "date": Timestamp(date: date),
-            "time": Timestamp(date: time),
+            "date": dateString,
+            "time": timeString,
             "guests": guests,
             "name": name,
             "userID": userID
@@ -65,5 +68,17 @@ class DataManager: ObservableObject {
             }
         }
     }
+
+    private var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+    }()
+    
+    private var timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter
+    }()
 }
 
