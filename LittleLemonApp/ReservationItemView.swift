@@ -1,9 +1,3 @@
-//  ReservationItemView.swift
-//  LittleLemonApp
-//
-//  Created by Sarthak Jha on 09/08/2024.
-//
-
 import SwiftUI
 
 struct ReservationItemView: View {
@@ -12,9 +6,12 @@ struct ReservationItemView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(reservation.date)
+                Text(reservation.name)
                     .font(.headline)
-                Text("Time: \(reservation.time)")
+                Text(formattedDate(reservation.date))
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                Text("Time: \(formattedTime(reservation.time))")
                     .font(.subheadline)
                     .foregroundColor(.gray)
                 Text("Guests: \(reservation.guests)")
@@ -28,9 +25,21 @@ struct ReservationItemView: View {
         .cornerRadius(10)
         .shadow(color: .gray.opacity(0.3), radius: 5, x: 0, y: 2)
     }
+
+    private func formattedDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
+    }
+
+    private func formattedTime(_ time: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter.string(from: time)
+    }
 }
 
 #Preview {
-    ReservationItemView(reservation: Reservation(id: "a", date: "August 15, 2024", time: "7:00 PM", guests: 2))
+    ReservationItemView(reservation: Reservation(id: "a", date: Date(), time: Date(), guests: 2, name: "John Doe"))
 }
 

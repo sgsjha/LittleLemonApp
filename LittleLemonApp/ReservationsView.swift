@@ -54,9 +54,10 @@ struct ReservationsView: View {
 struct Reservation: Identifiable {
     
     var id: String
-    var date: String
-    var time: String
+    var date: Date
+    var time: Date
     var guests: Int
+    var name: String
     
 }
 

@@ -1,8 +1,13 @@
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseDatabase
+import Firebase
+import Foundation
+
 
 class DataManager: ObservableObject {
     @Published var reservations: [Reservation] = []
+
 
     init() {
         fetchReservations()
@@ -23,18 +28,21 @@ class DataManager: ObservableObject {
             } else if let snapshot = snapshot {
                 self.reservations = snapshot.documents.map { doc in
                     let data = doc.data()
+                    let date = (data["date"] as? Timestamp)?.dateValue() ?? Date()
+                    let time = (data["time"] as? Timestamp)?.dateValue() ?? Date()
                     return Reservation(
                         id: doc.documentID,
-                        date: data["date"] as? String ?? "",
-                        time: data["time"] as? String ?? "",
-                        guests: data["guests"] as? Int ?? 1
+                        date: date,
+                        time: time,
+                        guests: data["guests"] as? Int ?? 1,
+                        name: data["name"] as? String ?? ""
                     )
                 }
             }
         }
     }
 
-    func addReservation(date: String, time: String, guests: Int) {
+    func addReservation(date: Date, time: Date, guests: Int, name: String) {
         guard let userID = Auth.auth().currentUser?.uid else {
             print("User not logged in")
             return
@@ -42,9 +50,10 @@ class DataManager: ObservableObject {
 
         let db = Firestore.firestore()
         let newReservation = [
-            "date": date,
-            "time": time,
+            "date": Timestamp(date: date),
+            "time": Timestamp(date: time),
             "guests": guests,
+            "name": name,
             "userID": userID
         ] as [String : Any]
 
