@@ -15,15 +15,17 @@
 	<key>STORAGE_BUCKET</key>
 	<string>littlelemonapp-b87a6.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
+	<key>DATABASE_URL</key>
+	<string>https://littlelemonapp-b87a6-default-rtdb.europe-west1.firebasedatabase.app/</string>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:817429148968:ios:c8c779969d576ff7f04c1d</string>
 </dict>

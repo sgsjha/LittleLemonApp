@@ -21,6 +21,11 @@ struct MainView: View {
                     Image(systemName: "calendar")
                     Text("Reservations")
                 }
+            
+            ContactUsView().tabItem {
+                Image(systemName: "phone")
+                Text("Contact Us")
+            }
         }
     }
 }
